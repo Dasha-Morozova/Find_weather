@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Поисковик погоды</title>
+  <!-- Подключаем Font Awesome для иконок  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css" integrity="sha512-r/Gan7PMSRovDus++vDS2Ayutc/cSdl268u047n4z+k7GYuR7Hiw71FsT3QQxdKJBVHYttOJ6IGLnlM9IoMToQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <div class="app">
+    <div class="bord">
+    <div class="top">
+      <div class="search">
+        <input id="cityInput" type="text" value="Moscow" placeholder="Введите город (например: Moscow)">
+        <button id="searchBtn">Поиск</button>
+      </div>
+      <div>
+        <button id="saveBtn" title="Сохранить как последний">💾 Сохранить</button>
+      </div>
+    </div>
+
+    <div id="error" class="msg" style="display: none;"></div>
+
+    <div class="main">    
+      <div class="card current">
+        <div class="weather-icon" id="weatherIcon"><img src="https://openweathermap.org/img/wn/04n@2x.png" alt="Clouds" width="84" height="84" style="display:block;margin:auto"></div>
+        <div class="meta">
+          <div class="city" id="cityName">Moscow, RU</div>
+          <div class="desc" id="desc">Overcast clouds</div>
+          <div class="temp" id="temp">18°C</div>
+          <div class="extra">
+            <div>Влажность: <span id="humidity">76</span>%</div>
+            <div>Ветер: <span id="wind">2.84</span> м/с</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card forecast">
+        <div class="card-body">
+          <div class="body-head">Прогноз на сегодня</div>
+        </div>
+        <div class="forecast-grid" id="forecastGrid"><div class="slot"><div class="hour">0:00</div><div><img src="https://openweathermap.org/img/wn/04n.png" alt="Clouds"></div><div class="slot-temp">18°C</div><div class="muted">Overcast clouds</div></div><div class="slot"><div class="hour">3:00</div><div><img src="https://openweathermap.org/img/wn/04n.png" alt="Clouds"></div><div class="slot-temp">17°C</div><div class="muted">Overcast clouds</div></div><div class="slot"><div class="hour">6:00</div><div><img src="https://openweathermap.org/img/wn/04n.png" alt="Clouds"></div><div class="slot-temp">15°C</div><div class="muted">Broken clouds</div></div><div class="slot"><div class="hour">9:00</div><div><img src="https://openweathermap.org/img/wn/04d.png" alt="Clouds"></div><div class="slot-temp">23°C</div><div class="muted">Broken clouds</div></div><div class="slot"><div class="hour">12:00</div><div><img src="https://openweathermap.org/img/wn/01d.png" alt="Clear"></div><div class="slot-temp">23°C</div><div class="muted">Clear sky</div></div><div class="slot"><div class="hour">15:00</div><div><img src="https://openweathermap.org/img/wn/01d.png" alt="Clear"></div><div class="slot-temp">29°C</div><div class="muted">Clear sky</div></div><div class="slot"><div class="hour">18:00</div><div><img src="https://openweathermap.org/img/wn/01d.png" alt="Clear"></div><div class="slot-temp">24°C</div><div class="muted">Clear sky</div></div><div class="slot"><div class="hour">21:00</div><div><img src="https://openweathermap.org/img/wn/01n.png" alt="Clear"></div><div class="slot-temp">21°C</div><div class="muted">Clear sky</div></div></div>
+      </div> 
+    </div>
+
+    <div class="muted dop-info"> Сохранить: последний город в хранилище.</div>
+  </div>
+  </div> 
+
+  <script src="js/index.js"></script>
+
+
+</body></html>
